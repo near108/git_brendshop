@@ -13,6 +13,7 @@
 
 <header id="header">
   <div class="header-logo">
+    <%= link_to "Brendshop", "/", method: :get %>
   </div>
   <% if user_signed_in? %>
     <div>
@@ -47,7 +48,7 @@
       <!--<li>< link_to "ARRANGE_COFFEE", "/arranges" ></li>-->
     <!--< if user_signed_in? >-->
       <!--<li>< link_to "MY PAGE", user_path(current_user) ></li>-->
-    <% end %>
+    <!--< end >-->
   </div>
 </hooter>
 
