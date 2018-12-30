@@ -1,0 +1,14 @@
+<h2>レシピ新規作成</h2>
+
+<%= form_tag '/recipes' do %>
+  <ul>
+    <li>レシピ名：<textarea name="recipe_name"></textarea></li>
+    <li>生産国１：<%= select_tag 'bean_id_1', options_from_collection_for_select(@bean, :id, :country) %></li>
+    <li>量１：<textarea name="amount_1"></textarea></li>
+    <li>生産国２：<%= select_tag 'bean_id_2', options_from_collection_for_select(@bean, :id, :country) %></li>
+    <li>量２：<textarea name="amount_2"></textarea></li>
+    <li>生産国３：<%= select_tag 'bean_id_3', options_from_collection_for_select(@bean, :id, :country) %></li>
+    <li>量３：<textarea name="amount_3"></textarea></li>
+  </ul>
+  <%= submit_tag 'submit' %>
+<% end %>

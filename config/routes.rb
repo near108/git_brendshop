@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "users/:id" => "users#show", as: :mypage
   
   resources :tops, only: [:index]
+  resources :recipes
   
   resource :admins, only: [:show]
   namespace :admins do

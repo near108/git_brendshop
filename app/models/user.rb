@@ -5,5 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   enum status: { common: 0, manager: 1}
+  
+  has_many :recipe
          
 end
