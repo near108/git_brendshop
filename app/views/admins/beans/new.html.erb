@@ -1,0 +1,11 @@
+<h2>コーヒー豆新規登録画面</h2>
+
+<%= form_tag('/admins/beans', method: :post) do %>
+<ul>
+  <li>生産国：<textarea name="country"></textarea></li>
+  <li>等級：<textarea name="grade"></textarea></li>
+  <li>焙煎度：<textarea name="roast"></textarea></li>
+  <li>コメント<textarea name="comment"></textarea></li>
+</ul>
+<input type="submit" value="SENT">
+<% end %>
