@@ -1,4 +1,4 @@
-User.create(email: 'masayoshi108justin@gmail.com', password: 'momotora108', status: '1')
+# User.create(email: 'masayoshi108justin@gmail.com', password: 'momotora108', status: '1')
 
 require "csv"
 beans_csv = CSV.readlines("db/beans.csv")
