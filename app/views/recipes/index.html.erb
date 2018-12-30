@@ -1,0 +1,23 @@
+<%= link_to "レシピの新規作成" , "/recipes/new", method: :get %>
+<% if current_user.manager? %>
+<h2><%= @user.email %>さん（管理者）のレシピ一覧</h2>
+<% else %>
+<h2><%= @user.email %>さんのレシピ一覧</h2>
+<% end %>
+
+<% current_user.recipe.each do |recipe| %>
+  <p>レシピ名：<%= recipe.recipe_name %></p>
+  <ul>
+    <li>豆１：<%= recipe.bean_1_id.country %></li>
+    <li>量１：<%= recipe.amount_1 %>ｇ</li>
+    <li>豆２：<%= recipe.bean_2_id.country %></li>
+    <li>量２：<%= recipe.amount_2 %>ｇ</li>
+    <li>豆３：<%= recipe.bean_3_id.country %></li>
+    <li>量３：<%= recipe.amount_3 %>ｇ</li>
+    <!--< raw recipe.generateQrHtml %>-->
+  </ul>
+  
+  <%= link_to "EDIT", "/recipes/#{recipe.id}/edit", method: :get %>
+  <%= link_to "DELETE", "/recipes/#{recipe.id}", method: :delete %>
+
+<% end %>
