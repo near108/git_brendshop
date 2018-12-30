@@ -3,8 +3,15 @@ Rails.application.routes.draw do
   devise_for :users
   
   root 'tops#index'
-  resource :tops, only: [:index]
   get "users/:id" => "users#show", as: :mypage
-  resource :admins, only: [:index]
+  
+  resources :tops, only: [:index]
+  
+  resource :admins, only: [:show]
+  namespace :admins do
+    resources :beans, only: [:index]
+    resources :columns, only: [:index]
+  end
+  
   
 end
