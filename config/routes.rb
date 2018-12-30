@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   root 'tops#index'
-  resources :tops
+  resources :tops, only: [:index]
+  resources :admins, only: [:index]
   
 end
