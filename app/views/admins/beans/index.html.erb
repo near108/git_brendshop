@@ -1,1 +1,15 @@
-Hello admins/beans World!
+<h2>登録コーヒー豆一覧</h2>
+<%= link_to "新規豆追加", "/admins/beans/new", method: :get %>
+
+<% @beans.each do |beans| %>
+<div>
+  <ul>
+    <li>生産国：<%= beans.country %></li>
+    <li>等級：<%= beans.grade %></li>
+    <li>焙煎度：<%=beans.roast %></li>
+    <li>コメント：<%= beans.comment %></li>
+  </ul>
+  <%= link_to "EDIT", "/admins/beans/#{beans.id}/edit", method: :get %>
+  <%= link_to "DELETE", "/admins/beans/#{beans.id}", method: :delete %>
+</div>
+<% end %>

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   resource :admins, only: [:show]
   namespace :admins do
-    resources :beans, only: [:index]
+    resources :beans
     resources :columns, only: [:index]
   end
   
