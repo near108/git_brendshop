@@ -1,0 +1,13 @@
+<h2>登録コーヒー豆編集画面</h2>
+<div>
+  <%= form_tag("/admins/beans/#{@bean.id}", method: :patch ) do %>
+    <ul>
+      <li>生産国：<textarea name="country"><%= @bean.country %></textarea></li>
+      <li>等級：<textarea name="grade"><%= @bean.grade %></textarea></li>
+      <li>焙煎度：<textarea name="roast"><%= @bean.roast %></textarea></li>
+      <li>コメント：<textarea name="comment"><%= @bean.comment %></textarea></li>
+    </ul>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>
+
