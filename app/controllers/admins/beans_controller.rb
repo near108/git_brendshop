@@ -18,16 +18,16 @@ class Admins::BeansController < AdminsController
   
   def update
     bean = Bean.find(params[:id])
-    # if current_user.manager?
+    if current_user.manager?
       bean.update(bean_params)
-    # end
+    end
   end
   
   def destroy
     bean = Bean.find(params[:id])
-    # if user_signed_in? && current_user.manager?
+    if user_signed_in? && current_user.manager?
       bean.destroy
-    # end
+    end
   end
   
 private
