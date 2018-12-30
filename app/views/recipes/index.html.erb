@@ -8,11 +8,11 @@
 <% current_user.recipe.each do |recipe| %>
   <p>レシピ名：<%= recipe.recipe_name %></p>
   <ul>
-    <li>豆１：<%= recipe.bean_1_id.country %></li>
+    <li>豆１：<%= recipe.bean_1.country %></li>
     <li>量１：<%= recipe.amount_1 %>ｇ</li>
-    <li>豆２：<%= recipe.bean_2_id.country %></li>
+    <li>豆２：<%= recipe.bean_2.country %></li>
     <li>量２：<%= recipe.amount_2 %>ｇ</li>
-    <li>豆３：<%= recipe.bean_3_id.country %></li>
+    <li>豆３：<%= recipe.bean_3.country %></li>
     <li>量３：<%= recipe.amount_3 %>ｇ</li>
     <!--< raw recipe.generateQrHtml %>-->
   </ul>
