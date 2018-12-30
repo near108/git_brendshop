@@ -1,1 +1,43 @@
 <%= current_user.email %>さんのマイページ
+
+<div class="current_recipie container-fluid">
+  <div class="home-main row">
+    <div class="main-box col-xs-offset-1 col-xs-4 ">
+      QRコードの設置
+      <!--<div class="qr-code">< raw @qr.as_html %></div>-->
+    </div>
+    
+    <div class="main-box col-xs-offset-2 col-xs-4">
+      味覚マトリクスの設置
+    </div>
+  </div>  
+  <div class="recipe-detail row">
+    <div class=" col-xs-offset-1 col-xs-11">
+      配合詳細
+    </div>
+  </div>
+  <div class="home-main row">
+    <div class="home-menu col-xs-4">
+      前回のレシピ
+    </div>
+    <div class="home-menu col-xs-4">
+      お気に入り①
+    </div>
+    <div class="home-menu col-xs-4">
+      お気に入り②
+    </div>
+  </div>
+</div>
+
+<div>
+  <%= link_to "レシピをつくる", "/recipes", method: :get %> 
+</div>
+
+<div>
+  My Coffeeshop
+</div>
+<div class="home-main row">
+  <div class="advertisement col-xs-offset-2 col-xs-8">
+    広告スペース
+  </div>
+</div>
