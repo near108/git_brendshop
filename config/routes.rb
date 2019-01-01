@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   resources :tops, only: [:index]
   resources :recipes
+  resources :arranges
   
   resource :admins, only: [:show]
   namespace :admins do

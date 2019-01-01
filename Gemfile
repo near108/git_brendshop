@@ -68,6 +68,12 @@ gem 'hirb'
 gem 'hirb-unicode'
 gem 'devise'
 
+gem 'rqrcode'
+gem 'rqrcode_png'
+gem 'chunky_png'
+gem 'mechanize'
+gem 'kaminari'
+
 
 group :production do
   gem 'rails_12factor'
