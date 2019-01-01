@@ -1,44 +1,31 @@
-<html>
-  <head>
-    <title>arrange</title>
-    <style type="text/css" href="./style.css"></style>
-    <!-- Compiled and minified CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <script type="text/javascript" src="./app.js"></script>
-    <h2>アレンジコーヒー一覧</h2>
-    <div>
-      <% @arranges.each do |arrange| %>
-        <div class="col s12 m7 card-panel">
-        <h3><%= arrange.category %></h3>
-          <h3 class="header red-text text-darken-2"><%= arrange.title %></h3>
-          <div class="card horizontal">
-            <div class="card-image">
-              <%= image_tag arrange.image_url %>
-            </div>
-            <div class="card-stacked">
-              <div class="card-content">
-                <p><%= arrange.info %></p>
-                <h5>作り方</h5>
-                <ol>
-                  <% text = arrange.howto.split(/(?<=。)/) %>
-                  <% text.each do |texts| %>
-                    <li><%= texts %></li>
-                  <% end %>
-                </ol>
-              </div>
-              <div class="card-action card-panel">
-                <a href="#" class="red-text text-darken-2">仮のリンク</a>
-              </div>
-            </div>
+<script type="text/javascript" src="./app.js"></script>
+<h2>アレンジコーヒー一覧</h2>
+<div>
+  <% @arranges.each do |arrange| %>
+    <div class="col s12 m7 card-panel">
+    <h3><%= arrange.category %></h3>
+      <h3 class="header red-text text-darken-2"><%= arrange.title %></h3>
+      <div class="card horizontal">
+        <div class="card-image">
+          <%= image_tag arrange.image_url %>
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p><%= arrange.info %></p>
+            <h5>作り方</h5>
+            <ol>
+              <% text = arrange.howto.split(/(?<=。)/) %>
+              <% text.each do |texts| %>
+                <li><%= texts %></li>
+              <% end %>
+            </ol>
+          </div>
+          <div class="card-action card-panel">
+            <a href="#" class="red-text text-darken-2">仮のリンク</a>
           </div>
         </div>
-      <% end %>
-      <%= paginate(@arranges) %>
+      </div>
     </div>
-  </body>
-</html>
+  <% end %>
+  <%= paginate(@arranges) %>
+</div>
