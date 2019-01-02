@@ -5,9 +5,12 @@ class RecipesController < ApplicationController
   def index
     @recipe = Recipe.all
     @user = User.find(current_user.id)
-    @qr = RQRCode::QRCode.new("Hello QR", size: 3, level: :h)
   end
   
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
+
   def new
     @recipe = Recipe.all
     @beans = Bean.all

@@ -14,9 +14,9 @@
     <li>量２：<%= recipe.amount_2 %>ｇ</li>
     <li>豆３：<%= recipe.bean_3.country %></li>
     <li>量３：<%= recipe.amount_3 %>ｇ</li>
-    <%= raw recipe.generateQrHtml %>
   </ul>
   
+  <%= link_to "SHOW", "recipes/#{recipe.id}", method: :get %>  
   <%= link_to "EDIT", "/recipes/#{recipe.id}/edit", method: :get %>
   <%= link_to "DELETE", "/recipes/#{recipe.id}", method: :delete %>
 

@@ -6,8 +6,4 @@ class Recipe < ApplicationRecord
   
   belongs_to :user
   
-  def generateQrHtml
-     RQRCode::QRCode.new("/recipes/#{self.id}/edit", size: 3, level: :h).as_html
-  end
-  
 end
