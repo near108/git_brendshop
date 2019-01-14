@@ -1,16 +1,15 @@
-<script type="text/javascript" src="./app.js"></script>
 <h2>アレンジコーヒー一覧</h2>
 <div>
   <% @arranges.each do |arrange| %>
-    <div class="col s12 m7 card-panel">
+    <div class=>
     <h3><%= arrange.category %></h3>
-      <h3 class="header red-text text-darken-2"><%= arrange.title %></h3>
-      <div class="card horizontal">
-        <div class="card-image">
+      <h3><%= arrange.title %></h3>
+      <div>
+        <div>
           <%= image_tag arrange.image_url %>
         </div>
-        <div class="card-stacked">
-          <div class="card-content">
+        <div>
+          <div>
             <p><%= arrange.info %></p>
             <h5>作り方</h5>
             <ol>
@@ -20,7 +19,7 @@
               <% end %>
             </ol>
           </div>
-          <div class="card-action card-panel">
+          <div>
             <a href="#" class="red-text text-darken-2">仮のリンク</a>
           </div>
         </div>
